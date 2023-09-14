@@ -1,0 +1,194 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_unhappy
+  - bot_challenge
+  - tech_company_info
+  - tech_company_values
+  - tech_products
+  - tech_services
+  - tech_contact
+  - tech_locations
+  - tech_technical_issues
+  - tech_support_hours
+  - tech_pricing
+  - tech_billing
+  - tech_feature_list
+  - tech_integration
+  - tech_security_measures
+  - tech_compliance
+  - tech_product_updates
+  - tech_documentation
+  - tech_jobs
+  - tech_partnerships
+  - tech_training
+  - tech_bug_reporting
+  - tech_feedback
+  - tech_account_creation
+  - tech_account_deletion
+  - user_info
+  - affirm_info_needed
+  - deny_info_needed
+  - user_query
+  - querry_type
+  - inform
+  - need_more_info
+
+entities:
+  - user_email
+  - user_phone_number
+  - info_needed
+  - info_type
+  
+slots:
+  info_needed:
+    type: bool
+    mappings:
+    - type: from_entity
+      entity: info_needed
+  user_email:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: user_email
+  user_phone_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: user_phone_number
+
+
+actions:
+- action_ask_info_need
+- action_ask_info_type
+- action_ask_user_info
+- action_ask_email
+- action_ask_phone_number  
+- action_ask_query 
+
+responses:
+  user_query:
+  - text: "Enter your querry."
+
+  info_needed:
+  - text: "Enter your querry."
+
+  utter_user_info:
+  - text: "Kindly enter your information."
+
+  utter_ask_info_type:
+  - text: "What type of information are you looking for?"
+
+  utter_querry_type:
+  - text: "What type of information are you looking for?"
+
+  utter_thank_and_goodbye:
+  - text: "Thank you for using our service. Goodbye!"
+
+  utter_ask_email:
+  - text: "Enter your email address."
+
+  utter_ask_phone_number:
+  - text: "Enter your phone number."
+
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, created by Aresha."
+
+  utter_tech_company_info:
+    - text: "We are a leading tech company specializing in Conversational AI, Python Development, Natural Language Processing, Machine Learning, Deep Learning, and DevOps and Cloud solutions."
+    
+  utter_tech_company_values:
+    - text: "Our core values include innovation, integrity, and customer-centricity."
+    
+  utter_tech_products:
+    - text: "We offer a range of software products, including chatbots."
+    
+  utter_tech_services:
+    - text: "Our services include consulting, support, and customization."
+    
+  utter_tech_contact:
+    - text: "You can contact our support team at support@techcompany.com or call us at +123456789."
+    
+  utter_tech_locations:
+    - text: "We have office in Islamabad."
+    
+  utter_tech_technical_issues:
+    - text: "I am sorry to hear that you are facing technical issues. Please provide more details so we can assist you."
+    
+  utter_tech_support_hours:
+    - text: "Our technical support is available from 9 AM to 9 PM, Monday to Friday."
+    
+  utter_tech_pricing:
+    - text: "You can find detailed pricing information on our website. We also offer a free trial."
+    
+  utter_tech_billing:
+    - text: "For billing inquiries, please contact our billing department at billing@convsol.com."
+    
+  utter_tech_feature_list:
+    - text: "We offer wide range of service, which includes Conversational AI, Python Development, Natural Language Processing, Machine Learning, Deep Learning, and DevOps and Cloud solutions."
+    
+  utter_tech_integration:
+    - text: "Yes, our software seamlessly integrates with popular tools."
+    
+  utter_tech_security_measures:
+    - text: "We take data security seriously. Our measures include encryption, regular security audits, and more."
+    
+  utter_tech_compliance:
+    - text: "Yes, we are GDPR compliant and follow strict data privacy guidelines."
+    
+  utter_tech_product_updates:
+    - text: "We release product updates regularly. Check our release notes for the latest updates."
+    
+  utter_tech_documentation:
+    - text: "Our product documentation is available at our official website."
+    
+  utter_tech_jobs:
+    - text: "To view our job openings and apply, visit our careers page at our official website."
+    
+  utter_tech_partnerships:
+    - text: "We offer partnership opportunities. Contact our partnership team at partners@convsol.com."
+    
+  utter_tech_training:
+    - text: "We provide training sessions and workshops. Stay tuned for upcoming events on our website."
+    
+  utter_tech_bug_reporting:
+    - text: "Thank you for reporting a bug. Our technical team will investigate. You can also check our bug bounty program."
+    
+  utter_tech_feedback:
+    - text: "We appreciate your feedback! You can leave a review on our website or contact us at feedback@convsol.com."
+    
+  utter_tech_account_creation:
+    - text: "To create an account, visit our registration page at our official website."
+    
+  utter_tech_account_deletion:
+    - text: "If you wish to delete your account, please contact our support team for assistance."
+
+  utter_ask_info_needed:
+    - text: "Is there any other information you need from us? If yes, please say 'Yes', or you can say 'No' to end this conversation."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+  
+

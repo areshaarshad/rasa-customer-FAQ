@@ -1,0 +1,169 @@
+version: "3.1"
+
+stories:
+
+- story: Start Conversation
+  steps:
+  - intent: user_info
+  - action: action_ask_email
+  - intent: inform
+    entities:
+    - email: "user_email" 
+  - action: action_ask_phone_number
+  - intent: inform
+    entities:
+    - phone_number: "user_phone_number"  
+  - action: action_ask_query
+  - intent: inform
+    entities:
+    - query: "user_query"
+  - action: info_needed 
+
+- story: User wants more information 
+  steps:
+  - intent: querry_type
+  - action: action_ask_info_type
+  - intent: affirm_info_needed
+    entities:
+    - info_type: "tech_company_values"
+  - action: utter_ask_info_type
+
+- story: User does not need more information
+  steps:
+  - intent: greet
+  - action: action_ask_info_type
+  - intent: deny_info_needed
+  - action: utter_thank_and_goodbye
+
+
+
+- story: sad path 1
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Provide tech company information
+  steps:
+  - intent: tech_company_info
+  - action: utter_tech_company_info
+
+- story: Provide tech company values
+  steps:
+  - intent: tech_company_values
+  - action: utter_tech_company_values
+
+- story: List tech products
+  steps:
+  - intent: tech_products
+  - action: utter_tech_products
+
+- story: List tech services
+  steps:
+  - intent: tech_services
+  - action: utter_tech_services
+
+- story: Provide tech company contact info
+  steps:
+  - intent: tech_contact
+  - action: utter_tech_contact
+
+- story: List tech company locations
+  steps:
+  - intent: tech_locations
+  - action: utter_tech_locations
+
+- story: Handle technical issues
+  steps:
+  - intent: tech_technical_issues
+  - action: utter_tech_technical_issues
+
+- story: Provide tech support hours
+  steps:
+  - intent: tech_support_hours
+  - action: utter_tech_support_hours
+
+- story: Provide tech pricing information
+  steps:
+  - intent: tech_pricing
+  - action: utter_tech_pricing
+
+- story: Handle tech billing inquiries
+  steps:
+  - intent: tech_billing
+  - action: utter_tech_billing
+
+- story: List tech features
+  steps:
+  - intent: tech_feature_list
+  - action: utter_tech_feature_list
+
+- story: Explain tech integrations
+  steps:
+  - intent: tech_integration
+  - action: utter_tech_integration
+
+- story: Explain tech security measures
+  steps:
+  - intent: tech_security_measures
+  - action: utter_tech_security_measures
+
+- story: Explain tech compliance
+  steps:
+  - intent: tech_compliance
+  - action: utter_tech_compliance
+
+- story: Announce tech product updates
+  steps:
+  - intent: tech_product_updates
+  - action: utter_tech_product_updates
+
+- story: Provide tech documentation link
+  steps:
+  - intent: tech_documentation
+  - action: utter_tech_documentation
+
+- story: Announce tech job opportunities
+  steps:
+  - intent: tech_jobs
+  - action: utter_tech_jobs
+
+- story: Explain tech partnerships
+  steps:
+  - intent: tech_partnerships
+  - action: utter_tech_partnerships
+
+- story: Announce tech training sessions
+  steps:
+  - intent: tech_training
+  - action: utter_tech_training
+
+- story: Handle tech bug reporting
+  steps:
+  - intent: tech_bug_reporting
+  - action: utter_tech_bug_reporting
+
+- story: Handle tech feedback
+  steps:
+  - intent: tech_feedback
+  - action: utter_tech_feedback
+
+- story: Explain tech account creation
+  steps:
+  - intent: tech_account_creation
+  - action: utter_tech_account_creation
+
+- story: Explain tech account deletion
+  steps:
+  - intent: tech_account_deletion
+  - action: utter_tech_account_deletion

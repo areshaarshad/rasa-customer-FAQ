@@ -1,0 +1,660 @@
+version: "3.1"
+
+nlu:
+- intent: inform
+  examples: |
+    - Hi
+    - I want to inquire something
+    - I have some querries
+    - Can you tell me about your company
+    - I want to know about your company
+    
+- intent: need_more_info
+  examples: |
+    - I want to ask more information.
+    - Can you explain more.
+    - I want to know more.
+    - More information needed.
+
+- intent: user_info
+  examples: |
+    - Email address: [johndoe@example.com](email)
+    - My mobile number is [1234567890](mobile_number)
+    - Email address: [ddavis@example.com](email)
+    - My mobile number is [0987654321](mobile_number)
+    - Email address: [anna.ma@example.com](email)
+    - My mobile number is [1357924680](mobile_number)
+    - Email address: [jrobert@example.com](email)
+    - My mobile number is [1482593607](mobile_number)
+    - Email address: [max.e@example.com](email)
+    - My mobile number is [1579235098](mobile_number)
+    - Email address: [bjoe@example.com](email)
+    - My mobile number is [0192837465](mobile_number)
+    - Email address: [alice@example.com](email)
+    - My mobile number is [5555555555](mobile_number)
+    - Email address: [emily@example.com](email)
+    - My mobile number is [6666666666](mobile_number)
+    - Email address: [michael@example.com](email)
+    - My mobile number is [7777777777](mobile_number)
+    - Email address: [daniel@example.com](email)
+    - My mobile number is [9999999999](mobile_number)
+    - Email address: [sophia@example.com](email)
+    - My mobile number is [1111111111](mobile_number)
+    - Email address: [liam@example.com](email)
+    - My mobile number is [2222222222](mobile_number)
+    - Email address: [olivia@example.com](email)
+    - My mobile number is [3333333333](mobile_number)
+    - Email address: [noah@example.com](email)
+    - My mobile number is [4444444444](mobile_number)
+    - Email address: [emma@example.com](email)
+    - My mobile number is [8888888888](mobile_number)
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: tech_company_info
+  examples: |
+    - What's your tech company all about?
+    - Tell me about your company's history.
+    - Briefly describe your tech company.
+    - Explain your company's mission and vision.
+    - Who are the founders of your tech company?
+    - Share some insights into your company's background.
+    - What's your tech company's primary focus?
+    - Can you give me an overview of your organization?
+    - How did your company start?
+    - What's the story behind your tech company?
+    - Provide some information about your company.
+    - What industries does your company serve?
+    - Tell me about your company's growth.
+    - Describe your company's core business areas.
+    - What are the key milestones of your company?
+    - Who are your main competitors in the industry?
+    - Explain your company's mission statement.
+    - What are your company's values and principles?
+    - Share some recent achievements of your company.
+    - How has your company contributed to the tech industry?
+
+- intent: tech_company_values
+  examples: |
+    - What values does your tech company uphold?
+    - Tell me about your company's core values.
+    - How does your company prioritize ethics?
+    - What principles guide your company's actions?
+    - Explain your commitment to customer satisfaction.
+    - Can you describe your corporate responsibility efforts?
+    - Share some examples of your company's values in action.
+    - How does your company ensure transparency?
+    - Tell me about your company's social responsibility.
+    - What sustainability practices does your company follow?
+    - Describe your company's dedication to innovation.
+    - How does your company support diversity and inclusion?
+    - Explain your approach to employee well-being.
+    - What initiatives are you taking for environmental protection?
+    - Tell me about your company's community involvement.
+    - Share some stories of your company's philanthropy.
+    - How do your company's values align with customer needs?
+    - What role does integrity play in your company's culture?
+    - Describe your company's commitment to quality.
+    - Can you provide examples of your company's ethical decisions?
+
+- intent: tech_products
+  examples: |
+    - What software products does your company offer?
+    - Tell me about your flagship software products.
+    - Explain the different software solutions you provide.
+    - Can you recommend a software product for data analytics?
+    - Describe the features of your software products.
+    - How can your software products benefit businesses?
+    - Do you have any hardware products available?
+    - What industries use your software products?
+    - Tell me about your software licensing options.
+    - Can you provide a brief overview of your software suite?
+    - What is the latest software product you've launched?
+    - Share some success stories related to your software.
+    - Explain how your software products improve efficiency.
+    - How user-friendly are your software interfaces?
+    - Do your software products require specialized training?
+    - Can you customize your software for specific industries?
+    - What platforms are compatible with your software?
+    - Tell me about your software's security features.
+    - Do you offer cloud-based software solutions?
+    - What industries benefit most from your software offerings?
+
+- intent: tech_services
+  examples: |
+    - What services do you provide to clients?
+    - Describe your consulting services in detail.
+    - How can I access your technical support services?
+    - Explain the process of requesting support.
+    - What customization options do you offer for software?
+    - Tell me about your training and onboarding services.
+    - Do you offer maintenance and update services?
+    - Can you provide examples of successful implementations?
+    - How do your services align with customer needs?
+    - Share some client testimonials about your services.
+    - What industries have you served with your services?
+    - Explain your approach to client collaboration.
+    - Can I request a demo of your services?
+    - What is the typical turnaround time for support requests?
+    - Describe your response time for urgent support issues.
+    - Do you have a dedicated team for service delivery?
+    - Can you provide case studies on your service projects?
+    - Tell me about your client satisfaction initiatives.
+    - How do you measure the success of your services?
+    - Are there any service packages available for clients?
+
+- intent: tech_contact
+  examples: |
+    - How can I get in touch with your support team?
+    - What is your customer support email address?
+    - Can you provide me with a phone number for support?
+    - Is there a live chat option for customer support?
+    - What are your general contact options?
+    - Do you have a dedicated customer support portal?
+    - Can you share the link to your contact page?
+    - Are there specific contact hours for support?
+    - How do I report technical issues to your team?
+    - Can I reach out to you through social media?
+    - What is the typical response time for emails?
+    - Do you have a support ticketing system?
+    - Are there multiple ways to contact your support?
+    - Can I request a call-back from your support team?
+    - What information should I include in my support request?
+    - Is there a knowledge base I can access for self-help?
+    - How can I escalate a support issue if needed?
+    - Can I find your support team on social platforms?
+    - Do you offer multilingual support?
+    - Tell me about your customer support team's expertise
+
+- intent: tech_locations
+  examples: |
+    - Where is your company headquartered?
+    - Can you tell me about your office locations?
+    - Can I visit your main office in person?
+    - What is the address of your headquarters?
+    - Are your offices open to the public?
+    - Can I schedule a visit to your nearest office?
+    - Do you have any remote office locations?
+    - Tell me about your office culture at headquarters.
+    - What cities host your company's offices?
+    - Are there any upcoming office openings?
+    - Can I find your office locations on a map?
+    - Describe the facilities at your main office.
+
+- intent: tech_technical_issues
+  examples: |
+    - I'm experiencing technical issues with your software.
+    - My system encountered errors while using your software.
+    - My software application crashed unexpectedly.
+    - Can you assist me with troubleshooting a technical problem?
+    - How can I resolve a connectivity issue with your software?
+    - I'm having trouble with my account login. Help!
+    - There seems to be a bug in your latest software update.
+    - My software is running slow. What should I do?
+    - Do you have a knowledge base for technical problem-solving?
+    - Can you guide me through the steps to fix an issue?
+    - I received an error message. What does it mean?
+    - What information do you need to diagnose my problem?
+    - Is there a dedicated support team for technical issues?
+    - Can I request remote assistance for technical problems?
+    - How quickly can you respond to critical technical issues?
+    - Do you offer on-site technical support if necessary?
+    - What are the common reasons for technical problems?
+    - Are there any recent system maintenance activities?
+    - Can I receive notifications about system status?
+    - How do you handle software bugs and glitches?
+
+- intent: tech_support_hours
+  examples: |
+    - What are your technical support hours?
+    - When can I reach your support team for assistance?
+    - Are you available on weekends for support?
+    - Do you offer 24/7 technical support?
+    - What's the expected response time for support requests?
+    - Can I get help outside of regular business hours?
+    - Are there specific support hours for different time zones?
+    - What support options do you provide during holidays?
+    - How can I access emergency support during off-hours?
+    - Are there any self-help resources available 24/7?
+    - Can I schedule support calls in advance?
+    - How do you prioritize support requests during peak times?
+    - Is there a way to track the status of my support request?
+    - What channels can I use to reach your support team?
+    - Do you offer extended support for critical issues?
+    - Can I request on-site support if necessary?
+    - Is there a dedicated team for after-hours support?
+    - How do you ensure continuity of support services?
+    - What happens if I need support outside of business hours?
+    - Tell me about your response time for high-priority issues.
+
+- intent: tech_pricing
+  examples: |
+    - How much does your software cost?
+    - Tell me about your pricing plans and options.
+    - Is there a free trial available for your software?
+    - Can I request a quote for your software?
+    - Do you offer discounts for annual subscriptions?
+    - What payment methods do you accept for software purchases?
+    - Are there any hidden fees associated with your pricing?
+    - Can I change my pricing plan later if needed?
+    - What happens if I exceed the limits of my plan?
+    - Is there a money-back guarantee for your software?
+    - Can I cancel my subscription at any time?
+    - Are there any volume discounts available?
+    - Do you have pricing options for startups?
+    - Can I request a custom pricing package?
+    - Tell me about your pricing model for enterprise customers.
+    - Are there different pricing tiers based on features?
+    - What is the pricing structure for support services?
+    - Do you offer educational discounts for software?
+    - Can I switch between monthly and annual billing?
+    - Explain your billing process and invoice generation.
+
+- intent: tech_billing
+  examples: |
+    - I have a question about my billing statement.
+    - Can you assist me with a billing issue I encountered?
+    - How can I update my billing information with you?
+    - What is your refund policy for software purchases?
+    - Can I receive an invoice for my recent purchase?
+    - What happens if I miss a payment for my subscription?
+    - How do I change my billing contact information?
+    - Are there any late payment penalties?
+    - Can I pay my bill using multiple payment methods?
+    - What is the process for resolving billing disputes?
+    - Can I receive notifications for upcoming payments?
+    - Is there an option for automatic billing?
+    - How can I cancel my subscription billing?
+    - Tell me about your subscription renewal process.
+    - Can I view my billing history online?
+    - Are there any tax considerations for billing?
+    - Can I request a breakdown of my charges?
+    - What is your policy for billing for usage overages?
+    - Do you provide detailed billing statements?
+    - Are there any billing resources for customers to review?
+
+- intent: tech_feature_list
+  examples: |
+    - List the key features of your software.
+    - Tell me about the core functionalities of your product.
+    - What makes your software unique in the market?
+    - Explain the reporting capabilities of your software.
+    - Are there any automation features in your software?
+    - Describe the security features of your software.
+    - Can you provide examples of software analytics?
+    - Tell me about your software's data integration options.
+    - What platforms is your software compatible with?
+    - How user-friendly is the software interface?
+    - Do you provide user training for software features?
+    - Can I customize the software to suit my needs?
+    - Are there any limitations to your software features?
+    - What data visualization tools are available?
+    - Explain the scalability of your software.
+    - How often do you release updates with new features?
+    - Are there any industry-specific features in your software?
+    - Tell me about your software's mobile app capabilities.
+    - Can I access software features remotely?
+    - Describe the user interface design of your software.
+
+- intent: tech_integration
+  examples: |
+    - Does your software integrate with other tools?
+    - Can I connect your software to my CRM system?
+    - Tell me about the API integration options you offer.
+    - Are there pre-built integrations available for software?
+    - How can I sync data with your software from external sources?
+    - Does your software work with popular cloud services?
+    - Can I customize integration settings to meet my needs?
+    - Explain the process of integrating your software with mine.
+    - Do you provide technical documentation for integrations?
+    - Are there any integration partners you recommend?
+    - What are the benefits of integrating your software?
+    - Can I automate data transfer between systems?
+    - Tell me about the data security of integrations.
+    - Are there any limitations to integration capabilities?
+    - How can I troubleshoot integration issues?
+    - Do you offer support for third-party plugins?
+    - Can I get assistance with custom integrations?
+    - Explain the performance impact of integrations.
+    - What types of data can I synchronize with your software?
+    - Can I schedule automated data imports and exports?
+
+- intent: tech_security_measures
+  examples: |
+    - How do you ensure the security of customer data?
+    - Explain the data encryption methods you employ.
+    - Tell me about your cybersecurity team's expertise.
+    - What measures are in place to prevent data breaches?
+    - Do you conduct regular security audits?
+    - Can I trust your software with sensitive information?
+    - Describe your approach to data privacy protection.
+    - Are there any industry standards you adhere to?
+    - How do you handle security incidents and breaches?
+    - What safeguards are in place for user authentication?
+    - Can I receive reports on security assessments?
+    - Tell me about your disaster recovery plan.
+    - What is your policy on software security updates?
+    - How often do you assess and update security measures?
+    - Can I request a security assessment for my organization?
+    - Explain the role of encryption in data protection.
+    - What is your incident response procedure?
+    - Do you provide training on data security best practices?
+    - Are there any certifications for your security practices?
+    - How can I report a security vulnerability to your team?
+
+- intent: tech_compliance
+  examples: |
+    - Is your company GDPR compliant?
+    - How do you comply with data protection regulations?
+    - Tell me about your legal and regulatory compliance efforts.
+    - Do you have a privacy policy available for review?
+    - What steps do you take to protect user privacy?
+    - Can you provide details about HIPAA compliance?
+    - Are you compliant with industry-specific standards?
+    - Explain your commitment to adhering to laws and regulations.
+    - Do you conduct regular audits for compliance?
+    - Are there any industry certifications you hold?
+    - How can I access your privacy policy?
+    - What mechanisms are in place for user consent?
+    - Can you clarify your data retention policy?
+    - Tell me about your compliance documentation.
+    - What procedures are in place for handling data requests?
+    - Are there any international data transfer mechanisms?
+    - Explain your approach to consent management.
+    - How do you ensure compliance across international borders?
+    - Can I access reports on your compliance efforts?
+    - What safeguards are in place for handling sensitive data?
+
+- intent: tech_product_updates
+  examples: |
+    - What's the latest update for your software?
+    - Are there any upcoming software releases?
+    - How often do you release new features?
+    - Can I opt-in for automatic software updates?
+    - What improvements were made in the last software update?
+    - Tell me about your software versioning system.
+    - Is there a changelog available for recent updates?
+    - How can I stay informed about software updates?
+    - Do you notify users about major feature releases?
+    - What's the process for updating software?
+    - Can I provide feedback on software updates?
+    - Explain the impact of software updates on user data.
+    - Are there any considerations for backward compatibility?
+    - Tell me about the release cycle for minor updates.
+    - How do you handle critical security updates?
+    - Can I roll back to a previous software version if needed?
+    - Are software updates mandatory for all users?
+    - Explain your approach to user feedback in updates.
+    - What documentation is available for new features?
+    - Can I test beta versions of upcoming updates?
+
+- intent: tech_documentation
+  examples: |
+    - Where can I find your product documentation?
+    - Do you have a knowledge base for user guidance?
+    - How can I access your user manuals?
+    - Are there video tutorials available for your software?
+    - Can I download API documentation from your site?
+    - Tell me about your developer resources and documentation.
+    - Is there a support forum where users can ask questions?
+    - How often is your documentation updated?
+    - Do you offer documentation in multiple languages?
+    - Can I provide feedback on your documentation?
+    - What topics are covered in your user guides?
+    - Explain the navigation and search features in your documentation.
+    - Are there any certifications for your documentation quality?
+    - Can I request custom documentation for my organization?
+    - Do you provide documentation on system requirements?
+    - What resources are available for troubleshooting issues?
+    - Tell me about the structure of your API documentation.
+    - How can I find sample code in your documentation?
+    - Can I request updates or additions to your documentation?
+    - Are there any known issues listed in your documentation?
+
+- intent: tech_jobs
+  examples: |
+    - Are there any job openings at your company?
+    - How can I apply for a job at your tech company?
+    - Tell me about your recruitment process.
+    - What qualifications do you look for in candidates?
+    - Do you offer internships for students?
+    - Can I submit my resume and application online?
+    - What benefits and perks do you offer to employees?
+    - Explain your company's culture and work environment.
+    - How do you foster career growth for employees?
+    - Are there opportunities for remote work?
+    - Do you have a commitment to diversity and inclusion?
+    - Can I learn about employee experiences at your company?
+    - Tell me about your onboarding process for new hires.
+    - What is the typical interview process at your company?
+    - Can I find information on job openings on your website?
+    - Are there specific skills you value in potential hires?
+    - How can I contact your HR department for inquiries?
+    - What sets your company apart as an employer?
+    - Can I attend recruitment events hosted by your company?
+    - Are there any networking opportunities for job seekers?
+
+- intent: tech_partnerships
+  examples: |
+    - Do you offer partnership opportunities?
+    - Can my company become a reseller of your products?
+    - Tell me about your partner program and benefits.
+    - How do you select and onboard business partners?
+    - What are the requirements for potential partners?
+    - Do you have a portal for partner applications?
+    - Can I refer other companies to partner with you?
+    - Explain the support and resources you offer to partners.
+    - Are there revenue-sharing models for partners?
+    - What's the process for collaboration with partners?
+    - Can partners access marketing materials and resources?
+    - Tell me about successful partnerships you've had.
+    - Do you have partner success stories to share?
+    - How do you handle disputes or conflicts with partners?
+    - Can partners co-brand your products and services?
+    - Are there any partner training programs available?
+    - What kind of support do you provide during onboarding?
+    - How do you track partner performance and sales?
+    - Can I find partner application guidelines on your website?
+    - Are there any exclusive partner events or conferences?
+
+- intent: tech_training
+  examples: |
+    - Do you provide training for your products and software?
+    - How can I sign up for training sessions?
+    - Tell me about your certification programs.
+    - Are there any upcoming workshops or webinars?
+    - What's the cost of training and certification?
+    - Can I request customized training for my team?
+    - How do I access training materials and resources?
+    - Do you offer remote or virtual training options?
+    - Can I find training schedules on your website?
+    - What topics are covered in your training sessions?
+    - Are there any prerequisites for training programs?
+    - Can I attend refresher courses for software?
+    - Tell me about the qualifications of your trainers.
+    - Do you offer post-training support and resources?
+    - Can I request on-site training for my organization?
+    - Explain the benefits of becoming a certified user.
+    - How do you evaluate trainee performance?
+    - Are there any training success stories to share?
+    - Can I provide feedback on training sessions?
+    - What is the typical duration of your training programs?
+
+- intent: tech_bug_reporting
+  examples: |
+    - I found a bug in your software. How can I report it?
+    - Is there a dedicated bug reporting system in place?
+    - Can I track the status of my bug report?
+    - Do you offer rewards or incentives for bug finders?
+    - What information should I include in my bug report?
+    - How quickly do you respond to bug reports?
+    - Is there a bug bounty program available?
+    - Can I report security vulnerabilities in your software?
+    - Are there guidelines for submitting bug reports?
+    - Do you have a process for verifying reported bugs?
+    - How can I report usability issues in your software?
+    - Tell me about your bug resolution timeline.
+    - Can I provide screenshots or videos as bug evidence?
+    - What happens after my bug report is verified?
+    - How do you communicate bug fixes to users?
+    - Are there any bug reporting best practices?
+    - Can I request updates on the status of my bug report?
+    - What types of bugs are considered high priority?
+    - Do you have a dedicated bug tracking platform?
+    - How do you ensure transparency in bug resolution?
+
+- intent: tech_feedback
+  examples: |
+    - I have feedback on your product. Where can I share it?
+    - How do you gather user feedback and suggestions?
+    - Do you consider feature requests from users?
+    - Can I provide feedback anonymously if I prefer?
+    - Are there any rewards or incentives for valuable feedback?
+    - Tell me about improvements made based on user feedback.
+    - How can I join beta testing for new features?
+    - Do you conduct user surveys or feedback sessions?
+    - Can I participate in focus groups for product development?
+    - Is there a dedicated feedback portal on your website?
+    - Can I share feedback about your customer service?
+    - What channels can I use to submit feedback?
+    - Are there any user feedback success stories?
+    - How can I stay updated on product improvements?
+    - Can I suggest ideas for future product enhancements?
+    - Tell me about the process of reviewing user feedback.
+    - Do you prioritize feedback based on user votes?
+    - Are there any feedback guidelines or best practices?
+    - Can I share feedback on specific software versions?
+    - What is the typical response time for user feedback?
+
+- intent: tech_account_creation
+  examples: |
+    - How do I create an account on your platform?
+    - Is registration free for your services?
+    - What information do I need to provide during account creation?
+    - Can I use my social media accounts for registration?
+    - What happens after I create an account with you?
+    - Are there any verification steps during registration?
+    - Can I create multiple accounts with the same email address?
+    - How can I reset my password if I forget it?
+    - Tell me about account security and authentication methods.
+    - Are there any restrictions on account creation?
+    - Do you offer two-factor authentication for accounts?
+    - Can I update my account information later?
+    - Is there a confirmation email after registration?
+    - How can I link multiple accounts under one profile?
+    - Can I change my username or display name?
+    - What are the account recovery options?
+    - How do you handle account deletion requests?
+    - Are there any age restrictions for account creation?
+    - Can I use a business email address for registration?
+    - Tell me about account privacy settings and options.
+
+- intent: tech_account_deletion
+  examples: |
+    - How can I delete my account with your company?
+    - What is your account deletion policy and process?
+    - Is account deletion permanent, or is there a grace period?
+    - Do you retain any user data after account deletion?
+    - Can I recover my account after deletion if I change my mind?
+    - Is there a waiting period before account deletion is processed?
+    - What happens to my active subscriptions when I delete my account?
+    - Are there any fees associated with account deletion?
+    - Can I request a copy of my data before deletion?
+    - How do I initiate the account deletion process?
+    - Can I delete my account through the user dashboard?
+    - Tell me about the implications of account deletion on data.
+    - Are there any account deletion confirmation steps?
+    - Can I cancel the account deletion process midway?
+    - Is there an option to temporarily disable my account instead?
+    - What steps should I follow to permanently delete my account?
+    - Can you provide a timeline for account deletion requests?
+    - How do you handle data deletion for compliance purposes?
+    - Can I request proof of account deletion for my records?
+    - Tell me about the support available for account deletion inquiries.
