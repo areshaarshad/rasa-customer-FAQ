@@ -31,7 +31,7 @@ To get started with this project, follow these steps:
 1. Clone this repository to your local machine.
 2. Navigate to the project directory.
 3. Set up the Rasa environment and install the necessary dependencies.
-4. Configure PostgreSQL database connection in the `config.yml` file.
+4. Configure PostgreSQL database connection in the `actions.py` file.
 5. Train the chatbot with the provided training data using the 'rasa train' command in the command prompt. 
 6. Once the model is trained, start the rasa run actions server using the 'rasa run actions' command.
 7. To interact with the bot, use the 'rasa shell' command.
